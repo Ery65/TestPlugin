@@ -1,0 +1,9 @@
+name: ${project.name}
+author: Ery65
+version: ${project.version}
+description: ${project.description}
+main: ${project.groupId}.${project.artifactId}
+commands:
+  test:
+    description: none.
+    aliases: [t]
