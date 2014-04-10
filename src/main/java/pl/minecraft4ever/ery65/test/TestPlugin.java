@@ -2,8 +2,10 @@ package pl.minecraft4ever.ery65.test;
 
 //import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.util.List;
 //import java.util.Random;
 
+import net.minecraft.util.com.google.common.collect.Lists;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -13,8 +15,12 @@ import org.bukkit.block.Block;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class TestPlugin extends JavaPlugin {
+	
+	public static TestPlugin plugin;
+	public List<String> players = Lists.newArrayList();
 
 	public void onEnable(){
+		plugin = this;
 		System.out.println("enabling...");
 		try {
 			setHardness(10.0F, getRandomBlock());
